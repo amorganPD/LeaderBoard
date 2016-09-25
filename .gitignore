@@ -67,3 +67,5 @@ packages/
 #Test files
 *.testsettings
 TinyBots/Properties/PublishProfiles/tinybots.pubxml
+LeaderBoard/Web.Release.config
+LeaderBoard/Web.Debug.config
