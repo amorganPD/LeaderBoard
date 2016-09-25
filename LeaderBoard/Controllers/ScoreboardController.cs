@@ -19,5 +19,12 @@ namespace LeaderBoard.Controllers
             return x;
             
         }
+
+        public void Post([FromBody]ScoreboardItem newScore)
+        {
+            var model = new LeaderboardModel();
+            model.InsertScore(newScore);
+
+        }
     }
 }

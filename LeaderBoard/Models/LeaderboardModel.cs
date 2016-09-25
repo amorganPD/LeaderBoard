@@ -20,5 +20,21 @@ namespace LeaderBoard.Models
                 }).ToList();
             }
         }
+        public void InsertScore(ScoreboardItem newScore)
+        {
+            using(var context = new acleaderbaordEntities())
+            {
+                var scoreToAdd = new Score()
+                {
+                    Username = newScore.UserName,
+                    ScoreValue = newScore.Score
+                };
+
+                context.Scores.Add(scoreToAdd);
+
+                context.SaveChanges();
+
+            }
+        }
     }
 }
